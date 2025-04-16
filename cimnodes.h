@@ -3,7 +3,7 @@
 #ifndef CIMNODES_INCLUDED
 #define CIMNODES_INCLUDED
 
-#include "cimgui.h"
+#include "../cimgui/cimgui.h"
 
 #ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
@@ -121,9 +121,9 @@ typedef struct ImNodesStyle ImNodesStyle;
 struct ImNodesStyle
 {
     float GridSpacing;
-    float NodeCornerRounding;
+    float  NodeCornerRounding;
     ImVec2 NodePadding;
-    float NodeBorderThickness;
+    float  NodeBorderThickness;
     float LinkThickness;
     float LinkLineSegmentsPerLength;
     float LinkHoverDistance;
@@ -169,6 +169,7 @@ CIMGUI_API void ImNodesIO_destroy(ImNodesIO* self);
 CIMGUI_API ImNodesStyle* ImNodesStyle_ImNodesStyle(void);
 CIMGUI_API void ImNodesStyle_destroy(ImNodesStyle* self);
 CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx);
+CIMGUI_API void imnodes_SetImguiAssert(ImAssertFunc func);
 CIMGUI_API ImNodesContext* imnodes_CreateContext(void);
 CIMGUI_API void imnodes_DestroyContext(ImNodesContext* ctx);
 CIMGUI_API ImNodesContext* imnodes_GetCurrentContext(void);

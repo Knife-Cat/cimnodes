@@ -51,6 +51,10 @@ CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx)
 {
     return imnodes::SetImGuiContext(ctx);
 }
+CIMGUI_API void imnodes_SetImguiAssert(ImAssertFunc func)
+{
+    return imnodes::SetImguiAssert(func);
+}
 CIMGUI_API ImNodesContext* imnodes_CreateContext()
 {
     return imnodes::CreateContext();
